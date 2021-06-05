@@ -6,12 +6,16 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav className="nav-bar">
-      <ul>
-        <li>
-          <Link to="/">HOME</Link>
+      <ul className="nav-bar__list">
+        <li className="nav-bar__list-item">
+          <Link className="nav-bar__list-item-link" to="/">
+            HOME
+          </Link>
         </li>
-        <li>
-          <Link to="/alt-path">Alt</Link>
+        <li className="nav-bar__list-item">
+          <Link className="nav-bar__list-item-link" to="/alt-path">
+            Alt
+          </Link>
         </li>
       </ul>
     </nav>
