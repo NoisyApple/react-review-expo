@@ -1,10 +1,15 @@
+import "./Counter.scss";
+
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   decrementCounter,
   deleteCounter,
   incrementCounter,
 } from "../../Store/counterSlice";
+import Button from "../Button/Button";
+import { COLORS } from "../../Constants";
 
 const Counter = ({ id }) => {
   const count = useSelector((store) => store.counter.counters[id].value);
@@ -24,12 +29,32 @@ const Counter = ({ id }) => {
   };
 
   return (
-    <div>
+    <div className="counter">
       <h1>{title}</h1>
-      <h2>Count: {count}</h2>
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
-      <button onClick={handleDelete}>Delete</button>
+      <div className="counter__buttons-container">
+        <div className="counter__count-value">{count}</div>
+        <Button
+          color={COLORS.tuftsBlue}
+          className="counter__button"
+          onClick={handleIncrement}
+        >
+          +
+        </Button>
+        <Button
+          color={COLORS.tuftsBlue}
+          className="counter__button"
+          onClick={handleDecrement}
+        >
+          -
+        </Button>
+        <Button
+          color={COLORS.razzmatazz}
+          className="counter__button"
+          onClick={handleDelete}
+        >
+          Delete
+        </Button>
+      </div>
     </div>
   );
 };

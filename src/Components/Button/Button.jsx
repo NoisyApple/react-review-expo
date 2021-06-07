@@ -2,9 +2,18 @@ import "./Button.scss";
 
 import React from "react";
 
-const Button = ({ children, color = "#33333388", className }) => {
+const Button = ({
+  children,
+  color = "#33333388",
+  className,
+  onClick = () => {},
+}) => {
   return (
-    <button style={{ background: color }} className={`button ${className}`}>
+    <button
+      onClick={onClick}
+      style={{ background: color }}
+      className={`button ${className}`}
+    >
       {children}
     </button>
   );

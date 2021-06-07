@@ -1,0 +1,27 @@
+.counter {
+  width: 100%;
+  background: #3333;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 16px;
+
+  &__buttons-container {
+    display: flex;
+    margin-top: 16px;
+  }
+
+  &__count-value {
+    font-size: 20px;
+    padding: 8px 14px;
+    background-color: #3333;
+    border-radius: 8px;
+    margin-right: 8px;
+  }
+
+  &__button {
+    font-size: 20px;
+    padding: 0px 8px;
+    margin-left: 8px;
+  }
+}

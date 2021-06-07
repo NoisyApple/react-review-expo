@@ -1,6 +1,6 @@
 @import "../../index.scss";
 
-.home {
+.counter-list {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 
@@ -23,17 +23,13 @@
 
   &__description {
     @extend %paragraph-sans-serif;
-
-    margin-bottom: 16px;
   }
 
-  &__buttons-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__button {
+  &__item {
     width: 100%;
-    margin-bottom: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
 }
