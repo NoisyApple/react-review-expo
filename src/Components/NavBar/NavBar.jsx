@@ -19,8 +19,8 @@ const NavBar = () => {
           </Link>
         </li>
         <li className="nav-bar__list-item">
-          <Link className="nav-bar__list-item-link" to="/alt-path">
-            Alt
+          <Link className="nav-bar__list-item-link" to="/counter-creator">
+            COUNTER CREATOR
           </Link>
         </li>
         <li className="nav-bar__list-item">

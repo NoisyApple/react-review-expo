@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Home/Home";
 import NavBar from "./NavBar/NavBar";
 import CounterList from "./CounterList/CounterList";
+import CounterCreator from "./CounterCreator/CounterCreator";
 
 const darkThemeStyles = {
   backgroundColor: "#333333",
@@ -27,8 +28,8 @@ const App = () => {
           <Route path="/counters">
             <CounterList />
           </Route>
-          <Route path="/alt-path">
-            <h1>Dark Theme: {isDarkThemeEnabled ? "true" : "false"}</h1>
+          <Route path="/counter-creator">
+            <CounterCreator />
           </Route>
           <Route path="/">
             <Home />
