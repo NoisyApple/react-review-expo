@@ -3,6 +3,8 @@ import "./NavBar.scss";
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Switch from "../Switch/Switch";
+
 const NavBar = () => {
   return (
     <nav className="nav-bar">
@@ -17,6 +19,7 @@ const NavBar = () => {
             Alt
           </Link>
         </li>
+        <Switch />
       </ul>
     </nav>
   );

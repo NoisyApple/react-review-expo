@@ -1,8 +1,8 @@
 @import "../../scss/index.scss";
 
 .nav-bar {
-  $color-background: $midnight-green-eagle-green;
-  $color-text: $medium-turquoise;
+  $color-background: $tufts-blue;
+  $color-text: lighten($color-background, 30);
 
   background-color: $color-background;
   padding: 8px;
