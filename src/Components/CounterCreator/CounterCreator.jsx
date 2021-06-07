@@ -1,6 +1,11 @@
+import "./CounterCreator.scss";
+
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+
 import { createCounter } from "../../Store/counterSlice";
+import Button from "../Button/Button";
+import { COLORS } from "../../Constants";
 
 const CounterCreator = () => {
   const [counterName, setCounterName] = useState("");
@@ -17,26 +22,40 @@ const CounterCreator = () => {
 
   return (
     <div className="counter-creator">
-      <h1>Create a new counter here:</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="counter-creator__field">
-          <label htmlFor="counterName">Counter name:</label>
-          <input
-            name="counterName"
-            value={counterName}
-            onChange={(e) => setCounterName(e.target.value)}
-          />
-        </div>
-        <div className="counter-creator__field">
-          <label htmlFor="initialValue">Initual value:</label>
-          <input
-            name="initialValue"
-            value={initialValue}
-            onChange={(e) => setInitialValue(e.target.value)}
-          />
-        </div>
-        <button type="submit">CREATE</button>
-      </form>
+      <div className="counter-creator__container">
+        <h1 className="counter-creator__title">Create a new counter:</h1>
+        <form className="counter-creator__form" onSubmit={handleSubmit}>
+          <div className="counter-creator__field">
+            <label className="counter-creator__label" htmlFor="counterName">
+              Counter name:
+            </label>
+            <input
+              className="counter-creator__input"
+              name="counterName"
+              value={counterName}
+              onChange={(e) => setCounterName(e.target.value)}
+            />
+          </div>
+          <div className="counter-creator__field">
+            <label className="counter-creator__label" htmlFor="initialValue">
+              Initual value:
+            </label>
+            <input
+              className="counter-creator__input"
+              name="initialValue"
+              value={initialValue}
+              onChange={(e) => setInitialValue(e.target.value)}
+            />
+          </div>
+          <Button
+            className="counter-creator__button"
+            color={COLORS.tuftsBlue}
+            type="submit"
+          >
+            CREATE
+          </Button>
+        </form>
+      </div>
     </div>
   );
 };
