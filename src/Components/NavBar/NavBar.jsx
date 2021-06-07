@@ -2,10 +2,14 @@ import "./NavBar.scss";
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import Switch from "../Switch/Switch";
+import { toggleDarkTheme } from "../../Store/darkThemeSlice";
 
 const NavBar = () => {
+  const dispatch = useDispatch();
+
   return (
     <nav className="nav-bar">
       <ul className="nav-bar__list">
@@ -19,7 +23,14 @@ const NavBar = () => {
             Alt
           </Link>
         </li>
-        <Switch />
+        <div className="nav-bar__dark-theme-switch-container">
+          <p className="nav-bar__dark-theme-switch-label">Dark Theme: </p>
+          <Switch
+            onChange={() => {
+              dispatch(toggleDarkTheme());
+            }}
+          />
+        </div>
       </ul>
     </nav>
   );
