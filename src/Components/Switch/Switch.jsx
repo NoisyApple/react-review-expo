@@ -3,16 +3,16 @@ import "./Switch.scss";
 import React from "react";
 
 const Switch = ({ onChange }) => {
-  const handleOnChange = () => {
+  const handleOnChange = (e) => {
     if (onChange) {
-      onChange();
+      onChange(e);
     }
   };
 
   return (
     <label className="switch">
       <input
-        onChange={handleOnChange}
+        onChange={(e) => handleOnChange(e)}
         className="switch__checkbox"
         type="checkbox"
       />
