@@ -6,4 +6,10 @@
   box-sizing: border-box;
 
   @extend %font-sans-serif;
+
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body {
+  background-color: $mint-cream;
 }

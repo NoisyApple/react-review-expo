@@ -1,8 +1,8 @@
 @import "../../scss/index.scss";
 
 .nav-bar {
-  $color-background: $midnight-green-eagle-green;
-  $color-text: $medium-turquoise;
+  $color-background: $tufts-blue;
+  $color-text: lighten($color-background, 30);
 
   background-color: $color-background;
   padding: 8px;
@@ -34,5 +34,16 @@
     &:active {
       background: lighten($color-background, 10);
     }
+  }
+
+  &__dark-theme-switch-container {
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+    padding: 0 10px;
+  }
+
+  &__dark-theme-switch-label {
+    margin-right: 8px;
   }
 }
