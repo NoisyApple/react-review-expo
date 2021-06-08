@@ -25,6 +25,8 @@
     margin-bottom: 8px;
     justify-content: center;
     align-items: center;
+    max-width: 30rem;
+    margin: 4px auto;
   }
 
   &__label {
@@ -42,6 +44,10 @@
     @extend %title-sans-serif;
 
     margin-bottom: 8px;
+  }
+
+  &__color-selector {
+    margin: 16px 0;
   }
 
   &__button {
