@@ -1,0 +1,56 @@
+@import "../../index.scss";
+
+.counter-creator {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  &__container {
+    grid-column: 3 / 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8888;
+    margin: 48px 0;
+    border-radius: 10px;
+    padding: 32px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__field {
+    display: flex;
+    margin-bottom: 8px;
+    justify-content: center;
+    align-items: center;
+    max-width: 30rem;
+    margin: 4px auto;
+  }
+
+  &__label {
+    font-size: 20px;
+  }
+
+  &__input {
+    flex: 1;
+    margin-left: 8px;
+    font-size: 20px;
+    padding: 0 8px;
+  }
+
+  &__title {
+    @extend %title-sans-serif;
+
+    margin-bottom: 8px;
+  }
+
+  &__color-selector {
+    margin: 16px 0;
+  }
+
+  &__button {
+    margin-top: 8px;
+  }
+}
