@@ -1,5 +1,12 @@
 # React Review
+This is a web project with the goal of show how React together with other technologies works, you can find documentation for each of those here:
 
+- [React]("https://reactjs.org/").
+- [React Redux]("https://react-redux.js.org/").
+- [React Router]("https://reactrouter.com/web/guides/quick-start").
+- [Babel]("https://babeljs.io/").
+- [Sass]("https://sass-lang.com/").
+- [Webpack]("https://webpack.js.org/").
 ## How to run the project
 
 Since this is a **NodeJS** based project the first thing you'll need is to have NodeJS already installed in your computer, you can find it [here]("https://nodejs.org/"). 😸
