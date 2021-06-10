@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "webpack-dev-server",
-    "build": "webpack",
+    "server": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "prepare": "husky install"
   },
   "author": "",
@@ -28,7 +28,8 @@
     "sass-loader": "^12.0.0",
     "webpack": "^5.38.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",

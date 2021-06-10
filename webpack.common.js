@@ -4,7 +4,6 @@ const EslintWebpackPlugin = require("eslint-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  mode: "development",
   entry: {
     app: ["./src/index.jsx"],
   },
@@ -12,6 +11,7 @@ module.exports = {
     publicPath: "/",
     path: path.resolve(__dirname, "build/"),
     filename: "bundle.js",
+    clean: true,
   },
   module: {
     rules: [
@@ -40,11 +40,4 @@ module.exports = {
       extensions: ["js", "jsx"],
     }),
   ],
-  devServer: {
-    port: 4040,
-    contentBase: path.join(__dirname, "build"),
-    historyApiFallback: true,
-    open: true,
-    hot: true,
-  },
 };
