@@ -25,6 +25,8 @@ const CounterCreator = () => {
         color: color,
       })
     );
+
+    alert(`A new counter with the name: ${counterName} was just created 😸`);
   };
 
   return (

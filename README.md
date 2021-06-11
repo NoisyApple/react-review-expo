@@ -14,7 +14,7 @@ Since this is a **NodeJS** based project the first thing you'll need is to have 
 If **NodeJS** was successfully installed you should be able to run the following command in your command line tool (you may need to reopen it if that's the case):
 
 ```
-node -version
+node --version
 ```
 
 If the version of **NodeJS** you just installed was shown in the terminal you are good to go, if not then there might have been an issue during the installation.
